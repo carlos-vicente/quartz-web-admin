@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuartzWebAdmin", "QuartzWebAdmin\QuartzWebAdmin.csproj", "{B4F9C525-5C56-440E-B4C2-972A33D7C8CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuartzConsole", "QuartzConsole\QuartzConsole.csproj", "{62497D55-C5C4-4AD7-A677-235C6F89B89C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuartzJobs", "QuartzJobs\QuartzJobs.csproj", "{B7379F45-5452-4D22-B235-D06C35A8F359}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{B4F9C525-5C56-440E-B4C2-972A33D7C8CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4F9C525-5C56-440E-B4C2-972A33D7C8CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4F9C525-5C56-440E-B4C2-972A33D7C8CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62497D55-C5C4-4AD7-A677-235C6F89B89C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62497D55-C5C4-4AD7-A677-235C6F89B89C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62497D55-C5C4-4AD7-A677-235C6F89B89C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62497D55-C5C4-4AD7-A677-235C6F89B89C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7379F45-5452-4D22-B235-D06C35A8F359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7379F45-5452-4D22-B235-D06C35A8F359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7379F45-5452-4D22-B235-D06C35A8F359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7379F45-5452-4D22-B235-D06C35A8F359}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

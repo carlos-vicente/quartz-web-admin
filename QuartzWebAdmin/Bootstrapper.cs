@@ -1,5 +1,7 @@
-﻿using Nancy.Bootstrappers.Autofac;
+﻿using Autofac;
+using Nancy.Bootstrappers.Autofac;
 using Nancy.Conventions;
+using Quartz.Impl;
 
 namespace QuartzWebAdmin
 {
@@ -16,6 +18,15 @@ namespace QuartzWebAdmin
             nancyConventions
                 .StaticContentsConventions
                 .Add(StaticContentConventionBuilder.AddDirectory("extLib", "lib"));
+        }
+
+        protected override ILifetimeScope GetApplicationContainer()
+        {
+            var builder = new ContainerBuilder();
+
+            builder.Register(context => StdSchedulerFactory.GetDefaultScheduler());
+
+            return builder.Build();
         }
     }
 }

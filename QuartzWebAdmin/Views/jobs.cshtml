@@ -1,0 +1,49 @@
+﻿@using System.Linq
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<System.Collections.Generic.IList<QuartzWebAdmin.ViewModels.JobDetail>>
+
+@{
+    Layout = "layout.cshtml";
+}
+
+<ul class="collapsible" data-collapsible="accordion">
+    @foreach (var jobDetail in Model)
+    {
+        @*<li>
+            <div class="collapsible-header">
+                <i class="material-icons">whatshot</i>
+                @jobDetail.JobName (@jobDetail.JobGroup)
+            </div>
+            <div class="collapsible-body> </div>
+        </li>*@
+
+
+    <li class="hoverable">
+        <div class="collapsible-header">
+            <i class="material-icons">filter_drama</i>
+            @jobDetail.JobName <span class="badge">@jobDetail.JobGroup</span>
+        </div>
+        <div class="collapsible-body">
+            <p>
+                @if (!string.IsNullOrWhiteSpace(jobDetail.Description))
+                {
+                    @:Description: @jobDetail.Description
+                    }
+
+                <br />
+                Type: @jobDetail.JobType.AssemblyQualifiedName
+                <br />
+                Job Data Map:
+                @if (jobDetail.JobDataMap.Any())
+                {
+                    <ul class="collection">
+                        @foreach (var data in jobDetail.JobDataMap)
+                        {
+                            <li class="collection-item">@data.Key</li>
+                        }
+                    </ul>
+                }
+            </p>
+        </div>
+    </li>
+    }
+</ul>
